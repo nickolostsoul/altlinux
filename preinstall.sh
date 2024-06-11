@@ -1,5 +1,4 @@
 #!/bin/bash
- 
 apt-get update
 apt-get install system-config-printer 1c-preinstall 1c-preinstall-full nano x11vnc -y
 x11vnc -storepasswd /etc/x11vnc.pass
