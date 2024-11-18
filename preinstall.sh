@@ -1,12 +1,13 @@
 #!/bin/bash
  
 apt-get update
-apt-get dist-upgrade
-update-kernel
+#apt-get dist-upgrade
+#update-kernel
 
-apt-get install system-config-printer 1c-preinstall 1c-preinstall-full nano x11vnc -y
+#apt-get install system-config-printer 1c-preinstall 1c-preinstall-full nano x11vnc -y
 
 #vnc
+apt-get install x11vnc -y
 x11vnc -storepasswd /etc/x11vnc.pass
 touch /root/startvnc.sh
 chmod +x /root/startvnc.sh
