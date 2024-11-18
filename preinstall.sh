@@ -1,7 +1,7 @@
 #!/bin/bash
  
-apt-get update
-#apt-get dist-upgrade
+apt-get update -y
+apt-get dist-upgrade -y
 #update-kernel
 
 #apt-get install system-config-printer 1c-preinstall 1c-preinstall-full nano x11vnc -y
