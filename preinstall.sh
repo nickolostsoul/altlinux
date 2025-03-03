@@ -2,9 +2,9 @@
  
 apt-get update -y
 apt-get dist-upgrade -y
-#update-kernel
+update-kernel
 
-#apt-get install system-config-printer 1c-preinstall 1c-preinstall-full nano x11vnc -y
+apt-get install system-config-printer 1c-preinstall htop fonts-ttf-ms nano x11vnc -y
 
 #vnc
 apt-get install x11vnc -y
