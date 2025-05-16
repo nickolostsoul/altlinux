@@ -19,6 +19,13 @@ sed '/greeter-wrapper=\/etc\/X11\/Xgreeter.lightdm/a display-setup-script = \/ro
 mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak
 mv /etc/lightdm/lightdm_new.conf /etc/lightdm/lightdm.conf
 
+#timesync
+
+#/etc/chrony.conf
+#server srv_dc1.gidra.oit iburst prefer
+#maxdistance 16.0
+
+
 #auditd
 #touch /etc/audit/rules.d/20-fstec-reccommend.rules
 #cat > /etc/audit/rules.d/20-fstec-reccommend.rules << EOF
