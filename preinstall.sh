@@ -20,36 +20,36 @@ mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak
 mv /etc/lightdm/lightdm_new.conf /etc/lightdm/lightdm.conf
 
 #auditd
-touch /etc/audit/rules.d/20-fstec-reccommend.rules
-cat > /etc/audit/rules.d/20-fstec-reccommend.rules << EOF
--w /var/log -p w -k var_log_changes
--w /etc/group -p wa -k etcgroup
--w /etc/passwd -p wa -k etcpasswd
--w /etc/gshadow -k etcgroup
--w /etc/shadow -k etcpasswd
--w /etc/security/opasswd -k opasswd
--w /etc/adduser.conf -k adduserconf
--w /etc/sudoers -p wa -k actions
--w /usr/bin/passwd -p x -k passwd_modification
--w /usr/bin/gpasswd -p x -k gpasswd_modification
--w /usr/sbin/groupadd -p x -k group_modification
--w /usr/sbin/groupmod -p x -k group_modification
--w /usr/sbin/addgroup -p x -k group_modification
--w /usr/sbin/useradd -p x -k user_modification
--w /usr/sbin/usermod -p x -k user_modification
--w /usr/sbin/adduser -p x -k user_modification
--w /etc/login.defs -p wa -k login
--w /etc/securetty -p wa -k login
--w /var/log/faillog -p wa -k login
--w /var/log/lastlog -p wa -k login
--w /var/log/tallylog -p wa -k login
--a exit,always -F path=/usr/bin/myapp -F perm=x -k myapp_execution
--a exit,always -F arch=b64 -S execve -F uid=0 -k authentication_events
--a exit,always -F arch=b32 -S execve -F uid=0 -k authentication_events
--a exit,always -F arch=b64 -S bind -S connect -F success=0 -k network_events
--w /dev/bus/usb -p rwxa -k usb
-EOF
-systemctl start auditd
-systemctl enable auditd
+#touch /etc/audit/rules.d/20-fstec-reccommend.rules
+#cat > /etc/audit/rules.d/20-fstec-reccommend.rules << EOF
+#-w /var/log -p w -k var_log_changes
+#-w /etc/group -p wa -k etcgroup
+#-w /etc/passwd -p wa -k etcpasswd
+#-w /etc/gshadow -k etcgroup
+#-w /etc/shadow -k etcpasswd
+#-w /etc/security/opasswd -k opasswd
+#-w /etc/adduser.conf -k adduserconf
+#-w /etc/sudoers -p wa -k actions
+#-w /usr/bin/passwd -p x -k passwd_modification
+#-w /usr/bin/gpasswd -p x -k gpasswd_modification
+#-w /usr/sbin/groupadd -p x -k group_modification
+#-w /usr/sbin/groupmod -p x -k group_modification
+#-w /usr/sbin/addgroup -p x -k group_modification
+#-w /usr/sbin/useradd -p x -k user_modification
+#-w /usr/sbin/usermod -p x -k user_modification
+#-w /usr/sbin/adduser -p x -k user_modification
+#-w /etc/login.defs -p wa -k login
+#-w /etc/securetty -p wa -k login
+#-w /var/log/faillog -p wa -k login
+#-w /var/log/lastlog -p wa -k login
+#-w /var/log/tallylog -p wa -k login
+#-a exit,always -F path=/usr/bin/myapp -F perm=x -k myapp_execution
+#-a exit,always -F arch=b64 -S execve -F uid=0 -k authentication_events
+#-a exit,always -F arch=b32 -S execve -F uid=0 -k authentication_events
+#-a exit,always -F arch=b64 -S bind -S connect -F success=0 -k network_events
+#-w /dev/bus/usb -p rwxa -k usb
+#EOF
+#systemctl start auditd
+#systemctl enable auditd
 
 shutdown -r now
