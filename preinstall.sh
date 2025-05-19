@@ -20,11 +20,8 @@ mv /etc/lightdm/lightdm.conf /etc/lightdm/lightdm.conf.bak
 mv /etc/lightdm/lightdm_new.conf /etc/lightdm/lightdm.conf
 
 #timesync
-
-#/etc/chrony.conf
-#server srv_dc1.gidra.oit iburst prefer
-#maxdistance 16.0
-
+echo "server srv_dc1.gidra.oit iburst prefer" >> /etc/chrony.conf
+echo "maxdistance 16.0" >> /etc/chrony.conf
 
 #auditd
 #touch /etc/audit/rules.d/20-fstec-reccommend.rules
