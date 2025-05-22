@@ -4,7 +4,7 @@ apt-get update -y
 apt-get dist-upgrade -y
 update-kernel
 
-apt-get install system-config-printer 1c-preinstall htop fonts-ttf-ms nano x11vnc -y
+apt-get install system-config-printer 1c-preinstall htop fonts-ttf-ms nano x11vnc zenity evince libenchant-2.so.2 -y
 
 #vnc
 apt-get install x11vnc -y
