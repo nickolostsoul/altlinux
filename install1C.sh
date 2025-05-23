@@ -1,11 +1,11 @@
 #!/bin/bash
 
-#Качаем дистрибутив
+#Качаем дистрибутив НЕ ПРОВЕРЕНО
 
 USERNAME=
 PASSWORD=
 
-NEW_VER='8.3.12.1469'
+NEW_VER='8.3.25.1286'
 
 if [[ -z "$USERNAME" ]];then
     echo "USERNAME not set"
